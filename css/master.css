@@ -1,0 +1,137 @@
+/* Global Rules */
+:root{
+    --heading:hsl(179, 62%, 43%);
+    --button: hsl(71, 73%, 54%);
+    --light-grey:hsl(204, 43%, 93%);
+    --light-blue:hsl(218, 22%, 67%);
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: Karla , sans-serif;
+}
+body{
+    font-size: 0.9375em;
+    
+    background-color: #E2ECF3;
+}
+.container{
+    width:340px;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    flex-direction: column;
+}
+
+/* End Global Rules */
+/* Start Head */
+.container .text{
+    margin:20px;
+}
+.head{
+    background-color: white;
+    border-radius: 5px 5px 0 0 ;
+}
+.head h1{
+    color:var(--heading);
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+.head h3{
+    color:var(--button);
+    margin-bottom: 20px;
+    
+}
+.head p{
+    color:var(--light-blue);
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.plan {
+    background-color: var(--heading);
+    color:var(--light-grey);
+    letter-spacing: 1px;
+    border-radius: 0 0px 0 5px   ;
+}
+.plan .text{
+    margin-bottom: 40px;
+}
+.plan h3{
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.plan .price {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.plan .month {
+    font-size: 16px;
+    
+}
+.plan p:nth-of-type(2)
+{
+    margin-bottom: 45px;
+}
+.plan .button{
+    padding: 20px 119px;
+    margin-bottom: 25px;
+    background-color: var(--button);
+    border-radius: 5px;
+}
+.why{
+    background-color: #4ABEBD;
+    border-radius: 0 0px  5px 0px  ;
+}
+.why h2{
+    color:var(--light-grey);
+    margin-bottom: 25px;
+}
+.why p{
+    color:var(--light-grey);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+@media (min-width:767px)
+{
+    .container{
+        width:780px;
+        flex-wrap:wrap;
+        flex-direction: row;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        right:calc((100vw - 780px) / 2);
+    }
+    .head{
+        flex-basis: 100%;
+    }
+    .head h1{
+        font-size: 30px;
+    }
+    .head h3{
+        font-size:25px;
+    }
+    .head p{
+        font-size:18px;
+    }
+    .plan ,
+    .why{
+        flex-basis: 50%;   
+    }
+    .why p{
+        font-size: 18px;
+    }
+    .plan .button{
+        padding:15px 120px;
+        margin-bottom:-380px;
+    }
+    .container .text{
+        margin:40px;
+    }
+}
+/* End Head */
